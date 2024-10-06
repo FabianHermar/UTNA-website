@@ -1,54 +1,82 @@
-# Astro Starter Kit: Basics
+<div align='center'>
+  <img src='https://raw.githubusercontent.com/FabianHermar/UTNA-website/refs/heads/main/public/utna-logo.png' height="75em" />
+  <h3>Página web oficial de la Universidad Tecnológica del Norte de Aguascalientes</h3>
+</div>
 
-```sh
-npm create astro@latest -- --template basics
-```
+## 📝 Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Este proyecto tiene como objetivo la creación de la página web oficial de la **Universidad Tecnológica del Norte de Aguascalientes** (UTNA), con el propósito de ofrecer un sitio moderno, accesible y funcional que proporcione información relevante a estudiantes, docentes, personal administrativo y el público en general.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El desarrollo del sitio web fue realizado por [**Fabián Herrera**](https://fabianh.me), en colaboración con [**Boxode, Ltd.**](https://boxode.org), una empresa de desarrollo de software comprometida con la creación de soluciones digitales eficientes y escalables.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## ⚙ Características principales
 
-## 🚀 Project Structure
+- **Diseño moderno y responsivo:** El sitio se adapta a dispositivos móviles, tabletas y computadoras de escritorio para una mejor experiencia de usuario.
+- **Navegación intuitiva:** Estructura clara y sencilla para acceder fácilmente a las diferentes secciones del sitio.
+- **Accesibilidad:** Cumple con las pautas de accesibilidad web para garantizar que sea usable para personas con diferentes capacidades.
+- **Integración de sistemas académicos:** Acceso a plataformas de gestión estudiantil como el Sistema Integral de Información Estratégica (SIIE) desde un apartado llamado **portalUTNA**.
+- **Noticias y eventos:** Sección de noticias actualizada y calendario de eventos importantes para la comunidad universitaria.
+- **Portal de servicios:** Acceso a servicios administrativos, becas, carreras académicas, y más.
+- **SEO optimizado:** El sitio está optimizado para motores de búsqueda, asegurando una mayor visibilidad en la web.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Tecnologías utilizadas
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+  - HTML5
+  - CSS3
+  - JavaScript
+  - TypeScript
+  - TailwindCSS
+  - AstroJS
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+  - **Git:** para control de versiones.
+  - **CI/CD:** para despliegue continuo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 💿 Instalación
 
-Any static assets, like images, can be placed in the `public/` directory.
+Para configurar el proyecto localmente, sigue los siguientes pasos:
 
-## 🧞 Commands
+1. Clona este repositorio:
 
-All commands are run from the root of the project, from a terminal:
+   ```bash
+   git clone https://github.com/FabianHermar/UTNA-website.git
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2. Dirígete a la carpeta del proyecto:
 
-## 👀 Want to learn more?
+   ```bash
+   cd UTNA-website
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. Instala las dependencias usando pnpm:
+
+   ```bash
+   pnpm install
+   ```
+
+4. Configura las variables de entorno en el archivo `.env`.
+
+5. Inicia el servidor de desarrollo:
+
+   ```bash
+   pnpm run dev
+   ```
+
+6. El sitio estará disponible en `http://localhost:4321`.
+
+## ☁ Despliegue
+
+El despliegue del sitio está configurado para realizarse automáticamente mediante un pipeline de CI/CD que, al hacer un push en la rama `main`.
+
+
+## ✅ Contribución 
+
+El proyecto actualmente no maneja y/o acepta ningún tipo de colaboración externa que no sea por parte del equipo de desarrollo y despligue de esta. Así como también del personal administrativo autorizado de la UTNA.
+
+## 🛠 Autores 
+
+- [**Fabián Herrera**](https://fabianh.me) - Desarrollador principal
+- [**Boxode, Ltd.**](https://boxode.org) - Colaboración en el desarrollo y despliegue
+
+## 📜 Licencia 
+
+Este proyecto está licenciado bajo la [GNU General Public License](LICENSE), por lo cual se requiere leer con atento cuidado y respetar dicha licencia y sus admiciones y limitaciones.
