@@ -1,0 +1,77 @@
+---
+import '@/styles/moreinfo.css'
+import Container from './Container.astro'
+import Card from './ui/card.astro'
+import GradualSpacing from './ui/gradual-spacing'
+---
+
+<Container>
+	<div class='flex items-center justify-center pt-32'>
+		<span class='select-none font-GilroyBold text-2xl font-bold text-neutral-500 md:text-4xl'
+			>03. &nbsp;</span
+		>
+		<GradualSpacing
+			className='select-none font-GilroyBold text-2xl font-bold text-black md:text-4xl'
+			text='Información Adicional'
+			client:visible
+		/>
+		<span class='ml-[0.6em] mt-1 h-0.5 grow translate-y-full bg-neutral-400'></span>
+	</div>
+	<p class='pb-4 font-GilroyRegular text-lg text-gray-400 lg:text-xl'>
+		Conoce un poco más sobre nuestra institución.
+	</p>
+	<div class='moreinfo-parent'>
+		<article class='moreinfo-1'>
+			<Card
+				title='Actividades Culturales y Deportivas'
+				description='¡Impulsa tu carrera con una formación técnica práctica y rápida! Nuestros programas de Técnico Superior Universitario te preparan en menos tiempo para destacar en áreas clave como tecnología y administración. Con docentes expertos, prácticas profesionales y una titulación reconocida, estarás listo para ingresar al mercado laboral con ventaja. ¡Inscríbete y acelera tu futuro!'
+				image='/img/ACD.avif'
+				href='/tsu'
+				imageClass='h-full w-full'
+				additionalClasses=''
+			/>
+		</article>
+		<article class='moreinfo-2'>
+			<Card
+				title='Centro de Estudios de la VID-UTNA y SOMOS VID'
+				description='¡Impulsa tu carrera con una formación técnica práctica y rápida! Nuestros programas de Técnico Superior Universitario te preparan en menos tiempo para destacar en áreas clave como tecnología y administración. Con docentes expertos, prácticas profesionales y una titulación reconocida, estarás listo para ingresar al mercado laboral con ventaja. ¡Inscríbete y acelera tu futuro!'
+				image='/img/VID.avif'
+				href='/tsu'
+				imageClass='h-full w-full'
+				additionalClasses=''
+			/>
+		</article>
+		<article class='moreinfo-3'>
+			<Card
+				title='Mtra. en Admón. Alejandra López Rábago - Rectora'
+				description='¡Impulsa tu carrera con una formación técnica práctica y rápida! Nuestros programas de Técnico Superior Universitario te preparan en menos tiempo para destacar en áreas clave como tecnología y administración. Con docentes expertos, prácticas profesionales y una titulación reconocida, estarás listo para ingresar al mercado laboral con ventaja. ¡Inscríbete y acelera tu futuro!'
+				image='/img/Rectora.avif'
+				href='/tsu'
+				imageClass='h-full w-full'
+				additionalClasses='lg:mt-[670px]'
+			/>
+		</article>
+	</div>
+</Container>
+
+<script>
+	function handleIntersection(entries) {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible')
+			}
+		})
+	}
+
+	const observer = new IntersectionObserver(handleIntersection, {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.1,
+	})
+
+	document
+		.querySelectorAll('.moreinfo-1, .moreinfo-2, .moreinfo-3, .moreinfo-4')
+		.forEach((card) => {
+			observer.observe(card)
+		})
+</script>
