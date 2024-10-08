@@ -1,5 +1,5 @@
 <div align='center'>
-  <img src='https://raw.githubusercontent.com/FabianHermar/UTNA-website/refs/heads/main/public/utna-logo.png' height="75em" />
+  <img src='https://raw.githubusercontent.com/FabianHermar/UTNA-website/refs/heads/main/public/img/utna-logo.png' height="75em" />
   <h3>Página web oficial de la Universidad Tecnológica del Norte de Aguascalientes</h3>
 </div>
 
