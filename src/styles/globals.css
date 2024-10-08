@@ -79,3 +79,28 @@
     font-weight: bold;
   }
 }
+
+
+::selection {
+  background-color: #d6dcba;
+  color: #606c38;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #efe1d6;
+  border-radius: 0.25rem
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c08261;
+  border-radius: 0.25rem
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #c08261
+}
