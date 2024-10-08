@@ -1,0 +1,102 @@
+---
+import GradualSpacing from '@/components/ui/gradual-spacing'
+import '../styles/Bento.css'
+import Container from './Container.astro'
+import Card from './ui/card.astro'
+import Link from './ui/link.astro'
+---
+
+<Container>
+	<div class='mb-8 flex h-10 items-center justify-center pt-10'>
+		<span class='select-none font-GilroyBold text-2xl font-bold text-neutral-500 md:text-4xl'
+			>01. &nbsp;</span
+		>
+		<GradualSpacing
+			className='select-none font-GilroyBold text-2xl font-bold text-black md:text-4xl'
+			text='Oferta Educativa'
+			client:visible
+		/>
+		<span class='ml-[0.6em] mt-1 h-0.5 grow translate-y-full bg-neutral-400'></span>
+	</div>
+	<p class='font-GilroyRegular text-lg text-gray-400 lg:text-xl'>
+		Descubre todas nuestras carreras en sus diferentes modalidades.
+	</p>
+	<div class='parent select-none pt-10'>
+		<article class='div1'>
+			<Card
+				title='TSU - Técnico Superior Universitario'
+				description='¡Impulsa tu carrera con una formación técnica práctica y rápida! Nuestros programas de Técnico Superior Universitario te preparan en menos tiempo para destacar en áreas clave como tecnología y administración. Con docentes expertos, prácticas profesionales y una titulación reconocida, estarás listo para ingresar al mercado laboral con ventaja. ¡Inscríbete y acelera tu futuro!'
+				image='/img/TSU.avif'
+				href='/tsu'
+				imageClass='h-full w-full'
+				additionalClasses='lg:pt-24'
+			/>
+		</article>
+		<article class='div2'>
+			<Card
+				title='Ingenierías'
+				description='¡Transforma tu futuro con nuestras ingenierías! Ofrecemos programas innovadores en Desarrollo y Gestión de Software, Agricultura Sustentable y Protegida, Mecatrónica, Mantenimiento Industrial, y más. Con un enfoque práctico y docentes especializados, te brindamos las herramientas necesarias para resolver los retos del mañana y destacar en tu campo. ¡Inscríbete ahora y construye una carrera de éxito en las industrias del futuro!'
+				image='https://images.unsplash.com/photo-1581092336206-b9e5146be6f7?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+				href='/ingenierias'
+				imageClass='h-full w-full'
+				additionalClasses='lg:pt-36'
+			/>
+		</article>
+		<article class='div3'>
+			<Card
+				title='Despresurizado'
+				description='¡Dale un impulso a tu carrera con nuestros programas de nivel despresurizado! Ofrecemos las licenciaturas de Administración Área Capital Humano y Mantenimiento Industrial, diseñadas para adaptarse a tu ritmo de vida. Con un enfoque práctico y flexible, podrás avanzar en tu formación profesional sin descuidar tus demás responsabilidades. ¡Inscríbete y asegura un futuro exitoso a tu propio ritmo!'
+				image='/img/DES.avif'
+				href='/despresurizado'
+				imageClass='h-full w-full'
+				additionalClasses='lg:pt-24'
+			/>
+		</article>
+		<article class='div4'>
+			<Card
+				title='Licenciaturas'
+				description='¡Lleva tu carrera al siguiente nivel con nuestras licenciaturas en áreas clave como Gestión Capital Humano, Contaduría, Gestión de Negocios y Proyectos, etc.! Te ofrecemos una formación integral, con docentes especializados y un enfoque práctico para que desarrolles las habilidades que demanda el mercado. Además, contarás con oportunidades de prácticas profesionales que te prepararán para destacar en tu campo. ¡Inscríbete hoy y asegura un futuro lleno de éxito!'
+				image='/img/LIC.avif'
+				href='/licenciaturas'
+				imageClass='h-full w-full object-left-50px md:object-left-50px-none'
+				additionalClasses='lg:pt-36'
+			/>
+		</article>
+	</div>
+	<div class='flex flex-col items-center justify-center gap-6 gap-x-6 pt-14 min-[650px]:flex-row'>
+		<Link
+			href='/oferta-educativa'
+			text='Resultados de Adminisión UTNA 2024 - Primera Etapa'
+			additionalClasses='bg-[#374828]/70 lg:text-lg text-white font-semibold font-GilroySemibold drop-shadow-lg select-none w-full text-xs'
+			hidden={false}
+			img={null}
+		/>
+		<Link
+			href='/oferta-educativa'
+			text='Resultados de Adminisión UTNA 2024 - Segunda Etapa'
+			additionalClasses='bg-[#374828]/70 lg:text-lg text-white font-semibold font-GilroySemibold drop-shadow-lg select-none w-full text-xs'
+			hidden={false}
+			img={null}
+		/>
+	</div>
+</Container>
+
+<script>
+	function handleIntersection(entries) {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible')
+			}
+		})
+	}
+
+	const observer = new IntersectionObserver(handleIntersection, {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.1,
+	})
+
+	document.querySelectorAll('.div1, .div2, .div3, .div4').forEach((card) => {
+		observer.observe(card)
+	})
+</script>
