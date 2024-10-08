@@ -1,0 +1,96 @@
+---
+import Container from '@/components/Container.astro'
+import GradualSpacing from '@/components/ui/gradual-spacing'
+import Link from '@/components/ui/link.astro'
+import '@/styles/university.css'
+import { Image } from 'astro:assets'
+---
+
+<Container>
+	<div class='flex items-center justify-center pt-32'>
+		<span class='select-none font-GilroyBold text-2xl font-bold text-neutral-500 md:text-4xl'
+			>02. &nbsp;</span
+		>
+		<GradualSpacing
+			className='select-none font-GilroyBold text-2xl font-bold text-black md:text-4xl'
+			text='Instalaciones'
+			client:visible
+		/>
+		<span class='ml-[0.6em] mt-1 h-0.5 grow translate-y-full bg-neutral-400'></span>
+	</div>
+	<p class='pb-4 font-GilroyRegular text-lg text-gray-400 lg:text-xl'>
+		Descubre el como son las instalaciones de nuestro campus.
+	</p>
+	<div class='university-patern'>
+		<article class='university-image-1 relative overflow-hidden'>
+			<Image
+				src='/img/UTNA.avif'
+				alt='UTNA building F'
+				height={100}
+				width={100}
+				class='object-fit absolute h-full w-full'
+			/>
+		</article>
+		<article class='university-image-2 relative overflow-hidden'>
+			<Image
+				src='/img/UTNA.avif'
+				alt='UTNA building F'
+				height={100}
+				width={100}
+				class='object-fit absolute h-full w-full'
+			/>
+		</article>
+		<article class='university-image-3 relative overflow-hidden'>
+			<Image
+				src='/img/UTNA.avif'
+				alt='UTNA building F'
+				height={100}
+				width={100}
+				class='object-fit absolute h-full w-full'
+			/>
+		</article>
+		<article class='university-image-4 relative overflow-hidden'>
+			<Image
+				src='/img/UTNA.avif'
+				alt='UTNA building F'
+				height={100}
+				width={100}
+				class='object-fit absolute h-full w-full'
+			/>
+		</article>
+	</div>
+	<div class='flex items-center justify-center pt-16'>
+		<Link
+			href='https://www.google.com/maps/place/Universidad+Tecnol%C3%B3gica+del+Norte+de+Aguascalientes/@22.2241144,-102.2813651,3a,75y,178.28h,97.36t/data=!3m8!1e1!3m6!1sAF1QipNPrLZ-xfJsUiroDQKEO2sbHEnQOyMCMORalGtu!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNPrLZ-xfJsUiroDQKEO2sbHEnQOyMCMORalGtu%3Dw203-h100-k-no-pi-10-ya101.16274-ro-0-fo100!7i13182!8i6591!4m9!3m8!1s0x868208c1ba388a0b:0x513aa559bea0f7f9!8m2!3d22.224559!4d-102.281417!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11bw47hlm6?coh=205409&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D'
+			text='Conoce nuestras instalaciones en una vista 360°'
+			additionalClasses='bg-gradient-to-l from-[#374828]/75 from-25% to-[#8FB269]/75 to-%100 text-xs md:text-base text-white font-semibold font-GilroySemibold drop-shadow-lg select-none'
+			hidden={false}
+			img={null}
+			target='_blank'
+		/>
+	</div>
+</Container>
+
+<script>
+	function handleIntersection(entries) {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible')
+			}
+		})
+	}
+
+	const observer = new IntersectionObserver(handleIntersection, {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.1,
+	})
+
+	document
+		.querySelectorAll(
+			'.university-image-1, .university-image-2, .university-image-3, .university-image-4'
+		)
+		.forEach((card) => {
+			observer.observe(card)
+		})
+</script>
