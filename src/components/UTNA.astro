@@ -1,0 +1,58 @@
+---
+import Container from '@/components/Container.astro'
+import BoxReveal from '@/components/ui/box-reveal'
+---
+
+<Container>
+	<section class='relative h-screen overflow-hidden pt-32'>
+		<div
+			class='h-full w-full bg-neutral-100 lg:flex lg:flex-row lg:items-center lg:justify-between'
+		>
+			<div class='relative hidden h-full w-1/2 select-none lg:block'>
+				<div class='absolute h-full w-full bg-black/20'></div>
+				<img
+					class='h-full w-full object-cover object-center'
+					src='/img/UTNA.avif'
+					alt='UTNA building F'
+				/>
+			</div>
+			<div class='relative flex h-full w-full flex-col justify-center px-10 py-10 lg:w-1/2'>
+				<BoxReveal boxColor={'#ddc0aa'} duration={0.5} client:visible>
+					<p class='font-GilroySemibold text-xs italic text-[#c08261] lg:text-base'>
+						“Formando lideres para el mundo del mañana”
+					</p>
+				</BoxReveal>
+				<BoxReveal boxColor={'#d6dcba'} duration={0.5} client:visible>
+					<h3
+						class='text-balance pt-6 font-GilroySemibold text-xl text-black lg:text-2xl xl:text-4xl'
+					>
+						La <span class='font-GilroyBold text-[#c08261]'>UTNA</span> sigue dejando huella en su comunidad,
+						demostrando con cada paso su <span class='font-GilroyBold italic text-[#606c38]'
+							>compromiso inquebrantable</span
+						>.
+					</h3>
+				</BoxReveal>
+				<div>
+					<BoxReveal boxColor={'#ddc0aa'} duration={0.5} client:visible>
+						<p
+							class='bottom-0 top-0 pt-6 font-GilroyRegular text-sm text-black lg:text-base xl:text-lg'
+						>
+							No se conforma con lo logrado, sino que avanza con determinación hacia una meta
+							ambiciosa y clara: convertirse en una <span class='font-GilroySemibold'
+								>Universidad de Clase Mundial</span
+							>.
+						</p>
+					</BoxReveal>
+					<BoxReveal boxColor={'#d6dcba'} duration={0.5} client:visible>
+						<p
+							class='bottom-0 top-0 pt-6 font-GilroyRegular text-sm text-black lg:text-base xl:text-lg'
+						>
+							Un futuro de excelencia que ya está construyendo hoy, ganándose el reconocimiento y
+							respeto de la región a cada paso.
+						</p>
+					</BoxReveal>
+				</div>
+			</div>
+		</div>
+	</section>
+</Container>
