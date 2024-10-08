@@ -9,6 +9,9 @@ export default {
 				GilroyBold: ['GilroyBold', 'system-ui', 'sans-serif'],
 				GilroySemibold: ['GilroySemibold', 'system-ui', 'sans-serif'],
 			},
+			objectPosition: {
+        'left-50px': '-50px 0',  // Desplaza 20px hacia la izquierda
+      },
     		borderRadius: {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',
