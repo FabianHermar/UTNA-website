@@ -1,0 +1,40 @@
+---
+interface BlogCard {
+	title: string
+	date: string
+	image: string
+	description: string
+	href: string
+	outstanding: string
+	additionalStyles: string
+	textStyles: string
+}
+
+const { title, date, image, description, href, outstanding, additionalStyles, textStyles } =
+	Astro.props as BlogCard
+---
+
+<a href={href} aria-label=`Article of ${title}`>
+	<article class='group overflow-hidden rounded-lg shadow transition hover:shadow-lg'>
+		<img
+			alt=`Illustration of ${title}, referent of the article content`
+			src='https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+			class='h-56 w-full object-cover'
+		/>
+
+		<div class='bg-white p-4 sm:p-6'>
+			<div class='flex flex-row items-center gap-x-3'>
+				<span class=`rounded-full px-2 py-1 ${additionalStyles} text-xs font-GilroySemibold`
+					>{outstanding}</span
+				>
+				<time datetime='2022-10-10' class='block font-mono text-xs text-gray-500'> {date} </time>
+			</div>
+
+			<h3 class='font-GilroyBold text-lg'>{title}</h3>
+
+			<p class='mt-2 line-clamp-3 font-GilroyRegular text-sm/relaxed text-gray-500'>
+				{description}
+			</p>
+		</div>
+	</article>
+</a>
