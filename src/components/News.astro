@@ -1,0 +1,51 @@
+---
+import Container from '@/components/Container.astro'
+import BlogCard from '@/components/ui/blogCard.astro'
+import GradualSpacing from '@/components/ui/gradual-spacing'
+---
+
+<Container>
+	<div class='flex items-center justify-center pt-32'>
+		<span class='select-none font-GilroyBold text-2xl font-bold text-neutral-500 md:text-4xl'
+			>04. &nbsp;</span
+		>
+		<GradualSpacing
+			className='select-none font-GilroyBold text-2xl font-bold text-black md:text-4xl'
+			text='Noticias'
+			client:visible
+		/>
+		<span class='ml-[0.6em] mt-1 h-0.5 grow translate-y-full bg-neutral-400'></span>
+	</div>
+	<p class='pb-4 pt-2 font-GilroyRegular text-lg text-gray-400 lg:text-xl'>
+		Entérate de las últimas noticias de nuestra institución.
+	</p>
+	<div class='grid grid-cols-1 gap-x-6 gap-y-6 pb-32 pt-10 md:grid-cols-2 lg:grid-cols-3'>
+		<BlogCard
+			title='Article 1'
+			date='10/oct/2024'
+			image={null}
+			description='Something incredible'
+			href='/'
+			outstanding='Destacado'
+			additionalStyles='bg-blue-100 text-blue-500'
+		/>
+		<BlogCard
+			title='Article 2'
+			date='10/oct/2024'
+			image={null}
+			description='Something incredible'
+			href='/'
+			outstanding='Destacado'
+			additionalStyles='bg-blue-100 text-blue-500'
+		/>
+		<BlogCard
+			title='Article 3'
+			date='10/oct/2024'
+			image={null}
+			description='Something incredible'
+			href='/'
+			outstanding='Destacado'
+			additionalStyles='bg-blue-100 text-blue-500'
+		/>
+	</div>
+</Container>
