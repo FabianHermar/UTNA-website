@@ -35,16 +35,16 @@ import { Image } from 'astro:assets'
 
 <header>
 	<nav
-		class='fixed z-20 w-full select-none border-b border-black/5 bg-white/[0.01] pt-0 backdrop-blur-lg dark:border-white/5 lg:border-transparent'
+		class='fixed z-20 w-full select-none border-b border-black/5 bg-white/[0.5] pt-0 backdrop-blur-lg dark:border-white/5 lg:border-transparent'
 	>
 		<div
 			class='flex w-full flex-wrap items-center justify-between gap-6 px-6 py-3 md:gap-0 md:py-4'
 		>
-			<div class='z-20 flex w-full justify-between md:px-0'>
+			<div class='z-20 flex w-full justify-start md:px-0'>
 				<a
 					href='/'
 					aria-label='logo'
-					class='flex w-full items-center justify-start space-x-2 fill-current text-black dark:text-white'
+					class='flex w-44 items-center justify-start space-x-2 fill-current pr-0 text-black md:pr-4'
 				>
 					<Image src='/img/utna-logo.png' alt='logo' class='h-14 w-auto' width={100} height={56} />
 				</a>
@@ -58,13 +58,13 @@ import { Image } from 'astro:assets'
 						<div
 							aria-hidden='true'
 							id='line'
-							class='m-auto h-0.5 w-5 rounded-md bg-black transition duration-300 dark:bg-white'
+							class='m-auto h-0.5 w-5 rounded-md bg-black transition duration-300'
 						>
 						</div>
 						<div
 							aria-hidden='true'
 							id='line2'
-							class='m-auto mt-2 h-0.5 w-5 rounded-lg bg-black transition duration-300 dark:bg-white'
+							class='m-auto mt-2 h-0.5 w-5 rounded-lg bg-black transition duration-300'
 						>
 						</div>
 					</button>
@@ -72,46 +72,97 @@ import { Image } from 'astro:assets'
 				<!-- <div id="navLayer" aria-hidden="true" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 backdrop-blur-lg transition duration-500 dark:bg-gray-100/10 lg:hidden"></div> -->
 				<div
 					id='navlinks'
-					class='invisible absolute left-0 top-full z-20 h-56 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl bg-neutral-300 p-8 opacity-0 shadow-2xl transition-all duration-300 dark:bg-neutral-700 dark:shadow-none dark:md:bg-transparent lg:visible lg:relative lg:flex lg:h-auto lg:w-full lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none'
+					class='invisible absolute left-0 top-full z-20 h-56 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-start gap-6 rounded-3xl bg-neutral-300 p-8 opacity-0 shadow-2xl transition-all duration-300 dark:bg-neutral-700 dark:shadow-none dark:md:bg-transparent lg:visible lg:relative lg:flex lg:h-auto lg:w-full lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none'
 				>
 					<div class='w-full text-gray-600 lg:w-max lg:pr-4 lg:pt-0'>
 						<ul
-							class='flex flex-col items-center justify-end gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-base'
+							class='flex flex-col items-center justify-start gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm'
 						>
 							<li>
 								<a
-									href='#experience'
-									class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									href='#home'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 								>
-									<span>test link</span>
+									<span>Somos UTNA</span>
 								</a>
 							</li>
 							<li>
 								<a
 									href='#projects'
-									class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 								>
-									<span>test link</span>
+									<span>Vinculación</span>
 								</a>
 							</li>
 							<li>
 								<a
 									href='#about-me'
-									class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 								>
-									<span>test link</span>
+									<span>Servicios Estudiantiles</span>
 								</a>
 							</li>
 							<li>
 								<a
 									href='#contact'
-									class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 								>
-									<span>test link</span>
+									<span>Normatividad</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href='#contact'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+								>
+									<span>Transparencia</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href='#contact'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:hidden md:px-4'
+								>
+									<span>Más</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href='/'
+									class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:hidden md:px-4'
+								>
+									En/Es
 								</a>
 							</li>
 						</ul>
 					</div>
+				</div>
+				<div
+					class='flex w-full flex-1 flex-row items-center text-gray-600 lg:w-max lg:pr-4 lg:pt-0'
+				>
+					<ul
+						class='flex flex-col items-center justify-end gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm'
+					>
+						<li>
+							<a
+								href='/'
+								class='hidden font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:block md:px-4'
+							>
+								En/Es
+							</a>
+						</li>
+						<li>
+							<a
+								href='/'
+								class='block font-GilroyRegular text-sm text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+							>
+								Portal<span class='font-GilroyBold font-bold'>UTNA</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
